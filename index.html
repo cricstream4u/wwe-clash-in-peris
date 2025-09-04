@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+  <title>Movies Streaming by Asif Ansari</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D4ED8',
+            secondary: '#2563EB',
+            bgGray: '#F3F4F6',
+            channelBg: '#FFFFFF',
+            channelHover: '#E5E7EB',
+            channelActive: '#3B82F6',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html, body {
+      margin: 0;
+    }
+    #channels::-webkit-scrollbar {
+      width: 8px;
+    }
+    #channels::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    #channels::-webkit-scrollbar-thumb {
+      background-color: #3B82F6;
+      border-radius: 10px;
+      border: 2px solid #f1f1f1;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0%); }
+      to { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 50s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-bgGray flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="p-4 bg-primary text-white flex justify-center items-center shadow-md">
+    <a href="https://cinearena.live" class="flex items-center space-x-3">
+      <img src="cineheader.png" alt="Cine Arena Header" class="h-12" />
+    </a>
+  </header>
+
+  <!-- Scrolling Marquee -->
+  <div class="flex items-center w-full bg-green-800">
+    <h4 class="shrink-0 m-0 text-lg text-white px-2">UPDATES:</h4>
+    <div class="overflow-hidden whitespace-nowrap flex-grow">
+      <p class="inline-block m-0 text-base text-white bg-red-600 px-2 py-1 animate-marquee">
+        If video not play refresh once and wait for few seconds video will start playing otherwise message in Telegram comments.
+        यदि वीडियो नहीं चलता है तो एक बार रिफ्रेश करें और कुछ सेकंड प्रतीक्षा करें वीडियो चलना शुरू हो जाएगा अन्यथा टेलीग्राम टिप्पणियों में संदेश दें।
+        ভিডিওটি না চললে একবার রিফ্রেশ করুন এবং কয়েক সেকেন্ড অপেক্ষা করুন ভিডিওটি চলতে শুরু করবে অন্যথায় টেলিগ্রামের মন্তব্যে বার্তা পাঠান।
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex flex-1 flex-col md:flex-row py-2">
+
+    <!-- Left Side: Ad + Player -->
+    <div class="flex md:flex-row flex-col md:flex-1">
+
+      <!-- Ad Section -->
+      <aside class="hidden md:flex flex-shrink-0 w-[160px] h-[300px] bg-gray-300 rounded-md shadow-md m-4 items-center justify-center text-gray-700 font-semibold select-none">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '3985e6b732a4c4ad3c1ea07dc12b3882',
+            'format' : 'iframe',
+            'height' : 300,
+            'width' : 160,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="//carryglanced.com/3985e6b732a4c4ad3c1ea07dc12b3882/invoke.js"></script>
+      </aside>
+
+      <!-- Video Player Section --> <section id="player-container" class="flex-1 bg-black min-h-[200px] md:min-h-[400px] py-4 md:py-8 m-4 md:m-0">
+        <iframe id="video-iframe" class="w-full h-full rounded-md" 
+        src="https://drive.google.com/file/d/1kjNVsH92ptytwgjiGREGBzaqZIV-TuYU/preview" 
+        frameborder="0" 
+        allowfullscreen 
+        allow="autoplay" >
+          
+        </iframe> </section>
+
+    </div>
+
+    <!-- Channel List -->
+    <aside id="channels" class="bg-white md:w-80 overflow-y-auto p-1">
+      <h2 class="text-xl font-semibold mb-1 text-primary px-4">Movie Name :</h2>
+      <div class="space-y-1 px-2">
+        <div class="channel cursor-pointer rounded-md p-3 bg-channelBg hover:bg-channelHover transition-colors duration-200"
+          data-src="https://drive.google.com/file/d/1kjNVsH92ptytwgjiGREGBzaqZIV-TuYU/preview">
+          Devra Part-1 Full Movie Hindi Dubbed
+        </div>
+        
+      </div>
+    </aside>
+
+   
+  </main>
+
+  <!-- Telegram Button -->
+  <div class="bg-primary text-white text-center py-3">
+    <a href="https://t.me/cric_stream" target="_blank" rel="noopener noreferrer">
+      <button class="bg-white text-primary px-6 py-2 rounded-md font-semibold shadow-md hover:bg-gray-100 transition">
+        Join Telegram
+      </button>
+    </a>
+  </div>
+
+  <!-- Bottom Ad -->
+  <div class="max-w-screen-lg mx-auto p-4">
+    <script async="async" data-cfasync="false" src="//carryglanced.com/2346ffc02acfb9eb4451708a5df9f609/invoke.js"></script>
+    <div id="container-2346ffc02acfb9eb4451708a5df9f609"></div>
+  </div>
+
+ 
+</body>
+</html>
